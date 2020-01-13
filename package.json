@@ -13,18 +13,21 @@
     "chatbot",
     "chat"
   ],
-   "engines": {
+  "engines": {
     "node": ">=8.x",
     "npm": ">=5.x"
   },
   "scripts": {
     "debug": "node --inspect --inspect-brk -r dotenv/config node_modules/hubot/bin/hubot.js -a rocketchat",
     "shell": "node -r dotenv/config node_modules/hubot/bin/hubot.js -a shell",
-    "local": "node -r dotenv/config node_modules/hubot/bin/hubot.js -a rocketchat"
+    "local": "node -r dotenv/config node_modules/hubot/bin/hubot.js -a rocketchat",
+    "start": "source ./.env && ./bin/hubot"
   },
   "dependencies": {
     "coffeescript": "^2.2.2",
     "hubot": "3",
+    "hubot-help": "^1.0.1",
+    "hubot-rocket-example": "0.0.2",
     "hubot-rocketchat": "rocketchat/hubot-rocketchat"
   },
   "devDependencies": {
